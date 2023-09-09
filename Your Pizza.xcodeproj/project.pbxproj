@@ -17,6 +17,8 @@
 		F95DB1662AAD196F0093ECBD /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB1652AAD196F0093ECBD /* TabBarView.swift */; };
 		F95DB1682AAD1BAC0093ECBD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB1672AAD1BAC0093ECBD /* Product.swift */; };
 		F95DB16B2AAD25520093ECBD /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB16A2AAD25520093ECBD /* ProductCell.swift */; };
+		F95DB16D2AAD295F0093ECBD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB16C2AAD295F0093ECBD /* Service.swift */; };
+		F95DB16F2AAD2B4C0093ECBD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB16E2AAD2B4C0093ECBD /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		F95DB1652AAD196F0093ECBD /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		F95DB1672AAD1BAC0093ECBD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		F95DB16A2AAD25520093ECBD /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		F95DB16C2AAD295F0093ECBD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		F95DB16E2AAD2B4C0093ECBD /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 		F95DB15C2AAD181E0093ECBD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F95DB16C2AAD295F0093ECBD /* Service.swift */,
+				F95DB16E2AAD2B4C0093ECBD /* APIError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,8 +204,10 @@
 				F95DB15F2AAD185F0093ECBD /* AccountView.swift in Sources */,
 				F95DB1622AAD188A0093ECBD /* OrderView.swift in Sources */,
 				F95DB1642AAD18A50093ECBD /* ListView.swift in Sources */,
+				F95DB16F2AAD2B4C0093ECBD /* APIError.swift in Sources */,
 				F95DB14F2AAD17730093ECBD /* ContentView.swift in Sources */,
 				F95DB1662AAD196F0093ECBD /* TabBarView.swift in Sources */,
+				F95DB16D2AAD295F0093ECBD /* Service.swift in Sources */,
 				F95DB16B2AAD25520093ECBD /* ProductCell.swift in Sources */,
 				F95DB14D2AAD17730093ECBD /* Your_PizzaApp.swift in Sources */,
 				F95DB1682AAD1BAC0093ECBD /* Product.swift in Sources */,

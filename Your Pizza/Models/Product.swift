@@ -18,7 +18,7 @@ struct Product: Hashable, Identifiable, Decodable {
     let protein: Int
 }
 
-struct Response {
+struct Response: Decodable {
     let request: [Product]
 }
 
