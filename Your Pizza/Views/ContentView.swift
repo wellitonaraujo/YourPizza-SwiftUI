@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/appetizers
         VStack {
          TabBarView()
         }

@@ -19,6 +19,10 @@
 		F95DB16B2AAD25520093ECBD /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB16A2AAD25520093ECBD /* ProductCell.swift */; };
 		F95DB16D2AAD295F0093ECBD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB16C2AAD295F0093ECBD /* Service.swift */; };
 		F95DB16F2AAD2B4C0093ECBD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB16E2AAD2B4C0093ECBD /* APIError.swift */; };
+		F95DB1722AAD394B0093ECBD /* ListViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB1712AAD394B0093ECBD /* ListViewModels.swift */; };
+		F95DB1752AAD44F30093ECBD /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DB1742AAD44F30093ECBD /* Alert.swift */; };
+		F9BFCE022AB640F800D87A18 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BFCE012AB640F800D87A18 /* RemoteImage.swift */; };
+		F9FEAA142AADF37500905424 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEAA132AADF37500905424 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		F95DB16A2AAD25520093ECBD /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		F95DB16C2AAD295F0093ECBD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		F95DB16E2AAD2B4C0093ECBD /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		F95DB1712AAD394B0093ECBD /* ListViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModels.swift; sourceTree = "<group>"; };
+		F95DB1742AAD44F30093ECBD /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F9BFCE012AB640F800D87A18 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		F9FEAA132AADF37500905424 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,13 +75,14 @@
 		F95DB14B2AAD17730093ECBD /* Your Pizza */ = {
 			isa = PBXGroup;
 			children = (
-				F95DB1692AAD25340093ECBD /* Components */,
 				F95DB15D2AAD18310093ECBD /* Resources */,
+				F95DB1732AAD44C00093ECBD /* Utils */,
 				F95DB15C2AAD181E0093ECBD /* Services */,
+				F95DB1692AAD25340093ECBD /* Components */,
 				F95DB15B2AAD18120093ECBD /* Models */,
 				F95DB15A2AAD180B0093ECBD /* Views */,
+				F95DB1702AAD387C0093ECBD /* ViewModel */,
 				F95DB14C2AAD17730093ECBD /* Your_PizzaApp.swift */,
-				F95DB1502AAD17740093ECBD /* Assets.xcassets */,
 				F95DB1522AAD17740093ECBD /* Preview Content */,
 			);
 			path = "Your Pizza";
@@ -95,6 +104,7 @@
 				F95DB1612AAD188A0093ECBD /* OrderView.swift */,
 				F95DB1632AAD18A50093ECBD /* ListView.swift */,
 				F95DB1652AAD196F0093ECBD /* TabBarView.swift */,
+				F9FEAA132AADF37500905424 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +122,7 @@
 			children = (
 				F95DB16C2AAD295F0093ECBD /* Service.swift */,
 				F95DB16E2AAD2B4C0093ECBD /* APIError.swift */,
+				F9BFCE012AB640F800D87A18 /* RemoteImage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -119,6 +130,7 @@
 		F95DB15D2AAD18310093ECBD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F95DB1502AAD17740093ECBD /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -129,6 +141,22 @@
 				F95DB16A2AAD25520093ECBD /* ProductCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F95DB1702AAD387C0093ECBD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F95DB1712AAD394B0093ECBD /* ListViewModels.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F95DB1732AAD44C00093ECBD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F95DB1742AAD44F30093ECBD /* Alert.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,10 +235,14 @@
 				F95DB16F2AAD2B4C0093ECBD /* APIError.swift in Sources */,
 				F95DB14F2AAD17730093ECBD /* ContentView.swift in Sources */,
 				F95DB1662AAD196F0093ECBD /* TabBarView.swift in Sources */,
+				F95DB1752AAD44F30093ECBD /* Alert.swift in Sources */,
 				F95DB16D2AAD295F0093ECBD /* Service.swift in Sources */,
 				F95DB16B2AAD25520093ECBD /* ProductCell.swift in Sources */,
+				F9BFCE022AB640F800D87A18 /* RemoteImage.swift in Sources */,
 				F95DB14D2AAD17730093ECBD /* Your_PizzaApp.swift in Sources */,
 				F95DB1682AAD1BAC0093ECBD /* Product.swift in Sources */,
+				F9FEAA142AADF37500905424 /* LoadingView.swift in Sources */,
+				F95DB1722AAD394B0093ECBD /* ListViewModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
