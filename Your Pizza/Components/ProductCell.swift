@@ -12,8 +12,7 @@ struct ProductCell: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "car")
-                .resizable()
+            YourPizzaRemoteImage(urlString: product.imageURL)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height:  90, alignment: .center)
                 .cornerRadius(8)
