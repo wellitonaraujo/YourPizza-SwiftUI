@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct DetailCell: View {
-    var title: String
-    var value: Int
+    var name: String = ""
+    var description: String = ""
+    var title: String = ""
+    var value: Int = 0
     
     var body: some View {
         VStack(){
+            Text(name)
+                .font(.title2)
+                .fontWeight(.semibold)
+            
+            Text(description)
+                .font(.callout)
+                .fontWeight(.thin)
+                .multilineTextAlignment(.leading)
+          
             Text(title)
                 .bold()
                 .font(.caption)
@@ -27,6 +38,6 @@ struct DetailCell: View {
 
 struct DetailCell_Previews: PreviewProvider {
     static var previews: some View {
-        DetailCell(title: "", value: 0)
+        DetailCell()
     }
 }

@@ -9,14 +9,13 @@ import SwiftUI
 
 struct ProductDetailView: View {
     let product: Product
+    @Binding var isShowingDetail: Bool
     
     var body: some View {
         VStack {
-            Image("icon")
-                .resizable()
+            YourPizzaRemoteImage(urlString: product.imageURL)
                 .scaledToFit()
-                .frame(width: 320, height: 225)
-            
+                
             VStack{
                 Text(product.name)
                     .font(.title2)
@@ -29,7 +28,6 @@ struct ProductDetailView: View {
                     .padding()
                 
                 HStack(spacing: 40) {
-                    
                     DetailCell(title: "Calories",
                                value: product.calories)
                     DetailCell(title: "Carbs",
@@ -44,26 +42,22 @@ struct ProductDetailView: View {
             Button {
                 
             } label: {
-                Text("$\(product.price, specifier: "%.2f") - Add to Order")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .frame(width: 300, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color("Primary"))
-                    .cornerRadius(10)
+                PrimaryButton(
+                    title: "$\(product.price, specifier: "%.2f") - Add to Order")
             }
             .padding(.bottom, 30)
         }
-        .frame(width: 320, height: 525)
+        .frame(width: 330, height: 525)
         .background(Color(.systemBackground))
         .cornerRadius(12)
         .shadow(radius: 40)
-        .overlay(PrimaryButton() , alignment: .topTrailing)
+        .overlay(
+            HideButton(isShowingDetail: $isShowingDetail), alignment: .topTrailing)
     }
 }
 
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailView(product: MockData.sampleProduct)
+        ProductDetailView(product: MockData.sampleProduct, isShowingDetail: .constant(true))
     }
 }

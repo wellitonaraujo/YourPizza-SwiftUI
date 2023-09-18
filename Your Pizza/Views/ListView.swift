@@ -8,19 +8,29 @@
 import SwiftUI
 
 struct ListView: View {
-   
     @StateObject var viewModel = ListViewModel()
+    @State private var isShowingDetail = false
+    @State private var selectedItem: Product?
     
     var body: some View {
         ZStack {
             NavigationStack {
                 List(viewModel.products) { product in
                     ProductCell(product: product)
+                        .onTapGesture {
+                            selectedItem = product
+                            isShowingDetail = true
+                        }
                 }
-                .navigationTitle("Pizzas")
+                .navigationTitle("Menu")
             }
             .onAppear {
                 viewModel.getProducts()
+            }
+            .blur(radius: isShowingDetail ? 15 : 0)
+            
+            if isShowingDetail {
+                ProductDetailView(product: selectedItem!, isShowingDetail: $isShowingDetail)
             }
             
             if viewModel.isLoading {

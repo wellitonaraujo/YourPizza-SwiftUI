@@ -1,36 +1,28 @@
 //
-//  Button.swift
+//  PrimaryButton.swift
 //  Your Pizza
 //
-//  Created by Welliton da Conceicao de Araujo on 17/09/23.
+//  Created by Welliton da Conceicao de Araujo on 18/09/23.
 //
 
 import SwiftUI
 
 struct PrimaryButton: View {
-    @State var closeMidal: Bool = false
+    var title: LocalizedStringKey
     
     var body: some View {
-        Button {
-            closeMidal.toggle()
-        } label: {
-            ZStack {
-                Circle()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(Color("Primary"))
-                    .opacity(0.6)
-                
-                Image(systemName: "xmark")
-                    .imageScale(.small)
-                    .foregroundColor(.white)
-                    .frame(width:40, height: 40)
-            }
-        }
+        Text(title)
+            .font(.title2)
+            .fontWeight(.semibold)
+            .frame(width: 300, height: 50)
+            .foregroundColor(.white)
+            .background(Color("Primary"))
+            .cornerRadius(10)
     }
 }
 
-struct Button_Previews: PreviewProvider {
+struct PrimaryButton_Previews: PreviewProvider {
     static var previews: some View {
-        PrimaryButton()
+        PrimaryButton(title: "TEst")
     }
 }
